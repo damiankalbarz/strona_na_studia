@@ -1,0 +1,50 @@
+form {
+    text-align: center;
+}
+
+input,select{
+    width: 300px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+
+}
+
+button {
+    width: 300px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+label{
+    font-style: italic;
+    font-weight: bold;
+}
+
+.point {
+    font-weight: 400;
+    margin-right: 0px;
+}
+
+.radio{
+    letter-spacing: 0px;
+}
+
+button:hover{
+    background-color: lawngreen;
+}
+
+.czerwone{
+    color: red;
+}
+
+.opcje{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.table {
+    visibility: hidden;
+}

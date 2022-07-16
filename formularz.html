@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Wyporzyczalnia-Formularz</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/formularz.css" rel="stylesheet" />
+    <script src="js/formularz.js"></script>
+</head>
+<body>
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-lg-5">
+            <a class="navbar-brand" href="index.html">Wypożyczalnia</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="formularz.html">Formularz</a></li>
+                    <li class="nav-item"><a class="nav-link" href="galeria.html">Galeria</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header-->
+    <header class="py-5">
+        <div class="container px-lg-5">
+            <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
+                    <h3 class="display-5 fw-bold">FORMULARZ WYPOŻYCZENIA AUTA</h3>       
+            </div>
+        </div>
+    </header>
+    <!-- Page Content-->
+    <section class="py-5">
+        <div class="container">
+            <form action="mailto:xxx.com" method="post">
+
+                <label>Imie: </label><br /><input type="text" id="imie" /> <br />
+                <span id="imie_error" class="czerwone"></span><br />
+
+                <label>Nazwisko: </label><br /><input type="text" id="nazwisko" /> <br />
+                <span id="nazw_error" class="czerwone"></span><br />
+
+                <label>Email: </label><br /><input name="email" size="30" id="email" placeholder="JanNowak@gmail.com" /> <br />
+                <span id="email_error" class="czerwone"></span><br />
+
+                <label>Auto: </label><br />
+                <select name="auto" id="auto" class="point">
+                    <option value="a1">AUDI A1</option>
+                    <option value="a3">AUDI A3</option>
+                    <option value="a7">AUDI A7</option>
+                    <option value="q5">AUDI Q7</option>
+                </select><br /><br />
+                <p>
+                    <label>Dodatkowe ubezpieczenie:</label><br />
+
+                    <div class="form-check form-check-inline">
+                        <label class="point"><input class="form-check-input" id="wybor" value="tak" type="radio" checked="checked" name="wybor">Tak</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <label class="point"><input class="form-check-input" id="wybor2" value="nie" type="radio" name="wybor">NIE</label>
+                    </div><br /><br />
+                              
+                    <label>Opcje dodatkowe</label><br /><br />
+                    <div class="form-check form-check-inline">
+                        <input  class="form-check-input" name="fotelik" type="checkbox" value="Fotelik" id="fotelik" /><label  class="point">Fotelik dla dzieci</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input  class="form-check-input" name="lodowka" type="checkbox" value="lodowka" id="lodowka" /><label class="point">Lodowka turystyczna</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input  class="form-check-input" name="linka" type="checkbox" value="linka" id="linka" /><label class="point">Linka cholownicza</label>
+                    </div>
+                    <br /><br />
+                    <button value="Wyślij" onclick="sprawdz()">Wyślij</button>
+                    <button value="Pokaż zapytania" onclick="pokaz()">Pokaż zapytania</button>
+                    <button value="usun" onclick="usun()">Usuń zapytania</button>
+            </form>
+
+        </div>
+    </section>
+    <section class="table py-5">
+        <table class="table table-sm table-dark">
+            <thead>
+                <tr>
+                    <th>NR</th>
+                    <th>IMIE</th>
+                    <th>NAZWISKO</th>
+                    <th>EMAIL</th>
+                    <th>AUTO</th>
+                    <th>UBEZPIECZENIE</th>
+                    <th>OPCJE DODATKOWE</th>
+                </tr>
+            </thead>
+            <tbody id="tresc"></tbody>
+        </table>
+
+    </section>
+
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+</body>
+</html>
